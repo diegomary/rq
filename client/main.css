@@ -1,0 +1,28 @@
+.table-booking
+{
+    width:100%;
+}
+
+.signal-red
+{
+
+    background-color: #663366;
+    color: yellow;
+
+}
+
+.conversation-frame
+{
+    width:400px;
+    height:200px;
+    border-style:solid;
+    border-width: thin;
+    border-color: #111111;
+    overflow-y: scroll;
+    font-size:18px;
+
+}
+
+
+
+

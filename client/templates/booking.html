@@ -1,0 +1,28 @@
+<template name="booking">
+    <button class ="js-book-button" id="mybutton">Add new booking</button>
+    <p><span>Date:<input class ="js-book-date" type="text" id="datepicker"></span>&nbsp;<span>Name:<input class ="js-book-name"  type="text"></span></p>
+    <p><span>Enter Your booking number</span><span>&nbsp;<input class ="js-booking_number" type="text"></span></p>
+    <div>
+        <table class="table-booking">
+            {{#each bookings}}
+                {{#if equals bookingNumber booking_number}}
+                    <tr class = "signal-red">
+                        <td>{{name}}</td>
+                        <td>{{bookingdate}}</td>
+                        <td>{{booking_number}}</td>
+                        <td><button class="js-remove-booking-c">Remove with Call</button></td>
+                        <td><button class="js-remove-booking-a">Remove with Apply</button></td>
+                    </tr>
+                {{else}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{bookingdate}}</td>
+                    <td>{{booking_number}}</td>
+                    <td><button class="js-remove-booking-c">Remove with Call</button></td>
+                    <td><button class="js-remove-booking-a">Remove with Apply</button></td>
+                </tr>
+                {{/if}}
+            {{/each}}
+        </table>
+    </div>
+</template>
